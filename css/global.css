@@ -1,0 +1,51 @@
+body {
+  font-family: "Fira Sans", Arial, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  color: #141414;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 40px 20px; /*Para desgrudar os elementos das margens é melhor usar padding, pois depois para colocar cor ed fundo não fica aqueles espaços em branco*/
+  margin: 0 auto; /*Com esse comando podemos alinha um item de bloco que tem o tamanho maximo ao centro*/
+  display: grid;
+  grid-template-columns: 1fr 2fr; /*Deixa 1 coluna para os conteudos de identificação da página e 2 colunas para as demais páginas*/
+  gap: 100px;
+}
+
+.subtitulo {
+  font-size: 8rem;
+  line-height: 1;
+  text-transform: uppercase;
+  max-width: 5ch; /*ch é o carater 0. Tamanho do valor zero*/
+  word-break: break-all; /*Para quebrar palavra*/
+}
+
+@media (max-width: 800px) {
+  .subtitulo {
+    font-size: 3rem;
+    text-transform: capitalize;
+    max-width: initial !important; /*com o valor inicial dele mesmo*/
+  }
+}
